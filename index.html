@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Lucas Medeiros e Thomas Furtado</title>
+<link rel="stylesheet" type="text/css"  href="style.css" />
+</head>
+<body>
+
+<h1>Lucas Medeiros e Thomas Furtado</h1>
+
+<div class="lucas">
+    <div class="dropdown">
+      <button class="dropbtn">Menu
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+
+        <div class="row">
+          <div class="coluna">
+            <a href="C:/Users/user/Desktop/recbatt/index.html#">Principal</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <form class="medeirosniehues">
+        <div class="input-container">
+            <div class="card">
+                <label class="name">Nome:</label>
+                <input type="text" id="nome" name="nome" placeholder="ex. Joao, Pedro, etc.">
+                <div class="card">
+                    <label class="email">E-mail:</label>
+                    <input type="text" id="email" name="email" placeholder="ex. joao@gmail.com">
+                </div>
+                <div class="card">
+                    <label class="telef">Telefone:</label>
+                    <input type="text" id="telef" name="telef" min="0" placeholder="ex. (48) 99999-9999">
+                </div>
+                <div class="card">
+                    <button type="reset" class="button1">Cancelar</button>
+                    <button type="button" class="button2" onclick="entrar()">Entrar</button>
+                </div>
+                <div id="alerta1">
+                    <span class="closebtn"
+                        onclick="this.parentElement.style.display = 'none';">&times;</span>
+                    <strong>Insira seu nome.</strong>
+                </div>
+                <div id="alerta2">
+                    <span class="closebtn"
+                        onclick="this.parentElement.style.display = 'none';">&times;</span>
+                    <strong>Insira seu email.</strong>
+                </div>  
+                <div id="alerta3">
+                    <span class="closebtn"
+                        onclick="this.parentElement.style.display = 'none';">&times;</span>
+                    <strong>Insira seu telefone.</strong>
+                </div>
+            </div>
+        </div>
+    </form>
+  </div>
+  <script type="text/javascript">
+    function entrar() {
+
+        let nome = document.getElementById('nome');
+        let email = document.getElementById('email');
+        let telef = document.getElementById('telef');
+        
+        var alerta1 = document.getElementById('alerta1');
+        var alerta2 = document.getElementById('alerta2');
+        var alerta3 = document.getElementById('alerta3');   
+    
+        if (nome.value == "") {
+            alerta1.style.display = "block";
+        }
+        if (email.value == "") {
+            alerta2.style.display = "block";
+        }
+        if (telef.value == "") {
+            alerta3.style.display = "block";
+
+    }
+    }
+</script>
+
+</body>
+</html>
